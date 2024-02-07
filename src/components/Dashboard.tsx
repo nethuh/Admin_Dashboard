@@ -3,6 +3,7 @@ import React from "react";
 import Card from "@/components/Card";
 import {MdOutlinePeople, MdOutlineShoppingBag, MdRemoveRedEye, MdShoppingCart} from "react-icons/md";
 import ChartOne from "@/components/chart/ChartOne";
+import ChartTwo from "@/components/chart/ChartTwo";
 
 const Dashboard: React.FC = () => {
     return (
@@ -25,6 +26,7 @@ const Dashboard: React.FC = () => {
 
             <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
                 <ChartOne />
+                <ChartTwo/>
             </div>
         </>
     );
