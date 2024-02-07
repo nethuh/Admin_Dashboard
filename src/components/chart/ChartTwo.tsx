@@ -62,8 +62,29 @@ const ChartTwo: React.FC = () => {
     handleReset;
 
     return (
-        <></>
-    );
+        <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
+            <div className="mb-3 justify-between gap-4 sm:flex">
+                <div>
+                    <h5 className="text-xl font-semibold text-black dark:text-white">
+                        Visitors Analytics
+                    </h5>
+                </div>
+                <div>
+                    <div className="relative z-20 inline-block">
+                        <select
+                            name=""
+                            id=""
+                            className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
+                        >
+                            <option value="" className="dark:bg-boxdark">
+                                Monthly
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+            );
 }
 
 export default ChartTwo;
