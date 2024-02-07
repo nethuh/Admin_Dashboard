@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLaout";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title:
@@ -10,9 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
-      {/*<DefaultLayout>*/}
-      {/*  */}
-      {/*</DefaultLayout>*/}
+      <Sidebar/>
     </div>
   );
 }
