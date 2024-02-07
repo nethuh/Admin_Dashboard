@@ -25,14 +25,16 @@ const Sidebar = ({sidebarOpen, setSidebarOpen}: SidebarProps) => {
         >
             {/* <!-- SIDEBAR HEADER --> */}
             <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-                <Link href="/">
+                <Link href="/"
+                className="group relative flex items-center gap-2.5 px-4 py-2 font-extrabold text-2xl text-bodydark1 duration-300 ease-in-out">
                     <Image
-                        width={176}
-                        height={32}
-                        src={""}
+                        width={50}
+                        height={5}
+                        src={"/image/logo-icon.svg"}
                         alt="Logo"
                         priority
                     />
+                    Admin
                 </Link>
 
                 <button
