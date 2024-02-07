@@ -1,4 +1,4 @@
-import {MdList} from "react-icons/md";
+import {MdList, MdSearch} from "react-icons/md";
 
 const Header = (props: {
     sidebarOpen: string | boolean | undefined;
@@ -23,13 +23,21 @@ const Header = (props: {
                 <div className="hidden sm:block">
                     <form>
                         <div className="relative">
-                            <button>
-
+                            <button className="absolute left-0 top-1/2 -translate-y-1/2">
+                                <MdSearch size={20}/>
                             </button>
-                            <input/>
+
+
+                            <input
+                            type="text"
+                            placeholder="Type to Search..."
+                            className="w-full bg-transparent pl-9 pr-4 font-medium focus:outline-none xl:w-125"
+                            />
                         </div>
                     </form>
                 </div>
+
+
             </div>
         </header>
     );
