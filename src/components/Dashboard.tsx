@@ -10,16 +10,16 @@ const Dashboard: React.FC = () => {
         <>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
                 <Card title="Total views" total="$3.456K" rate="0.43%" levelUp>
-                    <MdRemoveRedEye size={20}/>
+                    <MdRemoveRedEye className="text-meta-5" size={20}/>
                 </Card>
                 <Card title="Total Profit" total="$45.67K" rate="4.43%" levelUp>
-                    <MdShoppingCart size={20}/>
+                    <MdShoppingCart className="text-meta-5" size={20}/>
                 </Card>
                 <Card title="Total Product" total="$5.46K" rate="0.43%" levelUp>
-                    <MdOutlineShoppingBag size={20}/>
+                    <MdOutlineShoppingBag className="text-meta-5" size={20}/>
                 </Card>
                 <Card title="Total Users" total="$2.456K" rate="0.43%" levelDown>
-                    <MdOutlinePeople size={20}/>
+                    <MdOutlinePeople className="text-meta-5" size={20}/>
                 </Card>
 
             </div>
