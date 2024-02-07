@@ -37,8 +37,8 @@ const Header = (props: {
                     </form>
                 </div>
 
-                <div>
-                    <ul>
+                <div className="flex items-center gap-3 2xsm:gap-7">
+                    <ul className="flex items-center gap-2 2xsm:gap-4">
                         <MdNotifications size={20}/>
                         <MdChat size={20}/>
                     </ul>
