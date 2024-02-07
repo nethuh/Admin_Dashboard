@@ -26,7 +26,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen}: SidebarProps) => {
             {/* <!-- SIDEBAR HEADER --> */}
             <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
                 <Link href="/"
-                className="group relative flex items-center gap-2.5 px-4 py-2 font-extrabold text-2xl text-bodydark1 duration-300 ease-in-out">
+                className="group relative flex items-center gap-2.5 px-4 py-2 font-extrabold text-3xl text-bodydark1 duration-300 ease-in-out">
                     <Image
                         width={50}
                         height={5}
@@ -54,6 +54,9 @@ const Sidebar = ({sidebarOpen, setSidebarOpen}: SidebarProps) => {
                 <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
                     {/* <!-- Menu Group --> */}
                     <div>
+                        <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+                            MENU
+                        </h3>
                         <ul className="mb-6 flex flex-col gap-1.5">
                             {/* <!-- Menu Item Dashboard --> */}
 
