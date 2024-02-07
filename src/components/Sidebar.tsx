@@ -7,7 +7,12 @@ import {usePathname} from "next/navigation";
 
 import {
     MdArrowLeft,
-    MdSettings, MdCalendarMonth, MdDashboard, MdPeople, MdTableChart, MdBarChart,
+    MdSettings,
+    MdCalendarMonth,
+    MdDashboard,
+    MdPeople,
+    MdTableChart,
+    MdBarChart,
 } from "react-icons/md";
 
 interface SidebarProps {
