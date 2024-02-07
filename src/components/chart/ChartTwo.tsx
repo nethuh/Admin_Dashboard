@@ -1,5 +1,6 @@
-import { ApexOptions } from "apexcharts";
-import React, { useState } from "react";
+import {ApexOptions} from "apexcharts";
+import React, {useState} from "react";
+import ReactApexChart from "react-apexcharts";
 
 interface ChartThreeState {
     series: number[];
@@ -62,7 +63,8 @@ const ChartTwo: React.FC = () => {
     handleReset;
 
     return (
-        <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
+        <div
+            className="col-span-12 rounded-sm border border-stroke bg-white px-5 pb-5 pt-7.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
             <div className="mb-3 justify-between gap-4 sm:flex">
                 <div>
                     <h5 className="text-xl font-semibold text-black dark:text-white">
@@ -83,8 +85,27 @@ const ChartTwo: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="mb-2">
+                <div id="chartThree" className="mx-auto flex justify-center">
+                    <ReactApexChart
+                        options={options}
+                        series={state.series}
+                        type="donut"
+                    />
+                </div>
+            </div>
+
+            <div className="-mx-8 flex flex-wrap items-center justify-center gap-y-3">
+                <div className="w-full px-8 sm:w-1/2">
+                    <div className="flex w-full items-center">
+                        <span> Desktop </span>
+                        <span> 65% </span>
+                    </div>
+                </div>
+            </div>
         </div>
-            );
+    );
 }
 
 export default ChartTwo;
