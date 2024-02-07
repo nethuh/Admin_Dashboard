@@ -7,7 +7,7 @@ import {usePathname} from "next/navigation";
 
 import {
     MdArrowLeft,
-    MdBackup, MdCalendarMonth, MdDashboard, MdPeople,
+    MdSettings, MdCalendarMonth, MdDashboard, MdPeople, MdTableChart,
 } from "react-icons/md";
 
 interface SidebarProps {
@@ -91,8 +91,38 @@ const Sidebar = ({sidebarOpen , setSidebarOpen}: SidebarProps) => {
                                 </Link>
                             </li>
 
-
+                            <li>
+                                <Link
+                                    href="/tables"
+                                    className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                                        pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
+                                    }`}
+                                >
+                                    <MdTableChart size={20}/>
+                                    Tables
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/settings"
+                                    className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                                        pathname.includes("settings") &&
+                                        "bg-graydark dark:bg-meta-4"
+                                    }`}
+                                >
+                                    <MdSettings size={20}/>
+                                    Settings
+                                </Link>
+                            </li>
                         </ul>
+                    </div>
+
+                    {/* <!-- Others Group --> */}
+
+                    <div>
+                        <h3>
+
+                        </h3>
                     </div>
                 </nav>
             </div>
