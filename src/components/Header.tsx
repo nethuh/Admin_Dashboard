@@ -1,4 +1,4 @@
-import {MdList, MdSearch} from "react-icons/md";
+import {MdChat, MdList, MdNotifications, MdPeople, MdSearch} from "react-icons/md";
 
 const Header = (props: {
     sidebarOpen: string | boolean | undefined;
@@ -29,15 +29,21 @@ const Header = (props: {
 
 
                             <input
-                            type="text"
-                            placeholder="Type to Search..."
-                            className="w-full bg-transparent pl-9 pr-4 font-medium focus:outline-none xl:w-125"
+                                type="text"
+                                placeholder="Type to Search..."
+                                className="w-full bg-transparent pl-9 pr-4 font-medium focus:outline-none xl:w-125"
                             />
                         </div>
                     </form>
                 </div>
 
-
+                <div>
+                    <ul>
+                        <MdNotifications size={20}/>
+                        <MdChat size={20}/>
+                    </ul>
+                    <MdPeople/>
+                </div>
             </div>
         </header>
     );
