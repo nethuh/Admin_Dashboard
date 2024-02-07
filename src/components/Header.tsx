@@ -20,7 +20,16 @@ const Header = (props: {
                     </button>
                 </div>
 
+                <div className="hidden sm:block">
+                    <form>
+                        <div className="relative">
+                            <button>
 
+                            </button>
+                            <input/>
+                        </div>
+                    </form>
+                </div>
             </div>
         </header>
     );
