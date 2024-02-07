@@ -5,12 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import {usePathname} from "next/navigation";
 
+import {
+    MdArrowLeft,
+    MdBackup,
+} from "react-icons/md";
+
 interface SidebarProps {
     sidebarOpen: boolean;
     setSidebarOpen: (arg: boolean) => void;
 }
 
-const Sidebar = ({sidebarOpen}: SidebarProps) => {
+const Sidebar = ({sidebarOpen , setSidebarOpen}: SidebarProps) => {
     return (
         <aside
             className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
@@ -28,6 +33,15 @@ const Sidebar = ({sidebarOpen}: SidebarProps) => {
                         priority
                     />
                 </Link>
+
+                <button
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    aria-controls="sidebar"
+                    aria-expanded={sidebarOpen}
+                    className="block lg:hidden"
+                >
+                    <MdArrowLeft size={20}/>
+                </button>
             </div>
         </aside>
 
