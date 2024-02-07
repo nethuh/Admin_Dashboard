@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {usePathname} from "next/navigation";
 
 interface SidebarProps {
@@ -17,7 +19,15 @@ const Sidebar = ({sidebarOpen}: SidebarProps) => {
         >
             {/* <!-- SIDEBAR HEADER --> */}
             <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-
+                <Link href="/">
+                    <Image
+                        width={176}
+                        height={32}
+                        src={""}
+                        alt="Logo"
+                        priority
+                    />
+                </Link>
             </div>
         </aside>
 
