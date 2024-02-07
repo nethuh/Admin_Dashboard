@@ -7,7 +7,7 @@ import {usePathname} from "next/navigation";
 
 import {
     MdArrowLeft,
-    MdBackup, MdCalendarMonth, MdDashboard,
+    MdBackup, MdCalendarMonth, MdDashboard, MdPeople,
 } from "react-icons/md";
 
 interface SidebarProps {
@@ -56,13 +56,13 @@ const Sidebar = ({sidebarOpen , setSidebarOpen}: SidebarProps) => {
                             {/* <!-- Menu Item Dashboard --> */}
 
                             <Link
-                            href="#"
-                            className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                                (pathname === "/" || pathname.includes("dashboard")) &&
-                                "bg-graydark dark:bg-meta-4"
-                            }`}
+                                href="#"
+                                className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                                    (pathname === "/" || pathname.includes("dashboard")) &&
+                                    "bg-graydark dark:bg-meta-4"
+                                }`}
                             >
-                                <MdDashboard size={20} />
+                                <MdDashboard size={20}/>
                                 Dashboard
                             </Link>
 
@@ -72,10 +72,22 @@ const Sidebar = ({sidebarOpen , setSidebarOpen}: SidebarProps) => {
                                           pathname.includes("calendar") &&
                                           "bg-graydark dark:bg-meta-4"
                                       }`}
-                                      >
+                                >
 
                                     <MdCalendarMonth size={20}/>
                                     Calender
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link
+                                    href="/profile"
+                                    className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                                        pathname.includes("profile") && "bg-graydark dark:bg-meta-4"
+                                    }`}
+                                >
+                                    <MdPeople size={20}/>
+                                    Profile
                                 </Link>
                             </li>
 
