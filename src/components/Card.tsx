@@ -1,4 +1,5 @@
 import React, {ReactNode} from "react";
+import {MdArrowDownward, MdArrowUpward} from "react-icons/md";
 
 interface CardDataStatsProps {
     title: string;
@@ -33,11 +34,20 @@ const Card: React.FC<CardDataStatsProps> = ({
                     <span className="text-sm font-medium">{title}</span>
                 </div>
 
+                <span className={`flex items-center gap-1 text-sm font-medium ${
+                    levelUp && "text-meta-3"
+                } ${levelDown && "text-meta-5"} `}
+                >
 
+                    {rate}
+
+                    {levelUp && <MdArrowUpward size={20}/>}
+                    {levelDown && <MdArrowDownward size={20}/>}
+
+                </span>
             </div>
-
         </div>
-    )
-}
+    );
+};
 
 export default Card;
